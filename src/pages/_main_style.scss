@@ -75,16 +75,14 @@ ul {
     }
 
     .container {
-      @include yellow-bordered;
+      background-color: #1b1a17;
+      border: 2px solid #ff8303;
+      border-radius: 8px;
+      color: #f0e3ca;
       display: flex;
       width: 100%;
       padding: 1% 1% 1% 1%;
       justify-content: space-between;
-
-      &:hover {
-        color: #1b1a17;
-        border: 2px solid #ff8303;
-      }
 
       &__text {
         display: flex;

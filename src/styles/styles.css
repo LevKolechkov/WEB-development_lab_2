@@ -106,15 +106,6 @@ ul li .container {
   padding: 1% 1% 1% 1%;
   justify-content: space-between;
 }
-ul li .container:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
-}
-ul li .container:hover {
-  color: #1b1a17;
-  border: 2px solid #ff8303;
-}
 ul li .container__text {
   display: flex;
   flex-direction: column;
