@@ -46,15 +46,44 @@ function createTaskElement(task) {
   container.appendChild(containerText);
   container.appendChild(deleteButton);
 
+  const shareButton = document.createElement("button");
+  const shareImage = document.createElement("img");
+  shareImage.src = "../../assets/menu/share.svg";
+  shareImage.alt = "share";
+  shareButton.appendChild(shareImage);
+
+  const infoButton = document.createElement("button");
+  const infoImage = document.createElement("img");
+  infoImage.src = "../../assets/menu/info.svg";
+  infoImage.alt = "info";
+  infoButton.appendChild(infoImage);
+
+  const editButton = document.createElement("button");
+  const editImage = document.createElement("img");
+  editImage.src = "../../assets/menu/edit.svg";
+  editImage.alt = "edit";
+  editButton.appendChild(editImage);
+
+  const menu = document.createElement("div");
+  menu.className = "menu";
+  menu.appendChild(shareButton);
+  menu.appendChild(infoButton);
+  menu.appendChild(editButton);
+
   const listItem = document.createElement("li");
 
   taskList.appendChild(listItem);
 
   listItem.appendChild(container);
+  listItem.appendChild(menu);
 
   deleteButton.addEventListener("click", () => {
+    event.stopPropagation();
     taskList.removeChild(listItem);
     saveTasks();
+  });
+  container.addEventListener("click", () => {
+    alert("Div был нажат!");
   });
 }
 

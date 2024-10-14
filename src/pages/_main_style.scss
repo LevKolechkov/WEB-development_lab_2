@@ -110,6 +110,11 @@ ul {
       display: flex;
       margin-top: 1%;
       align-self: flex-end;
+      display: flex;
+
+      .visible {
+        display: none;
+      }
 
       button {
         align-items: center;
