@@ -52,15 +52,29 @@ ul {
       color: #f0e3ca;
       font-family: "Roboto", sans-serif;
 
-      h1 {
-        font-weight: 500;
-      }
-      h2 {
-        font-weight: 400;
+      &__text {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        @media (max-width: 450px) {
+          width: 70%;
+        }
+
+        h1 {
+          font-weight: 500;
+          overflow-wrap: break-word;
+        }
+        h2 {
+          font-weight: 400;
+          overflow-wrap: break-word;
+        }
       }
     }
 
     button {
+      width: 50px;
+      height: 45px;
       @include yellow-bordered;
       margin: 1% 4% 1% 1%;
       height: 45px;

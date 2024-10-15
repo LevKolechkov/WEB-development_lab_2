@@ -32,9 +32,19 @@ body {
   border-radius: 8px;
   color: #f0e3ca;
 
-  &:hover {
-    color: #393939;
-    border: 2px solid #a35709;
-    background-color: #1f1e1b;
+  @media (hover: hover) {
+    &:hover {
+      color: #393939;
+      border: 2px solid #a35709;
+      background-color: #1f1e1b;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: #393939;
+      border: 2px solid #a35709;
+      background-color: #1f1e1b;
+    }
   }
 }

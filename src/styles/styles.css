@@ -41,6 +41,11 @@ body {
   padding-right: 1%;
   gap: 10%;
 }
+@media (max-width: 450px) {
+  .set-task__input {
+    width: 60%;
+  }
+}
 .set-task__input input {
   background-color: #1b1a17;
   border: 2px solid #ff8303;
@@ -52,10 +57,19 @@ body {
   height: 50%;
   padding: 0% 2% 0% 1%;
 }
-.set-task__input input:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
+@media (hover: hover) {
+  .set-task__input input:hover {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
+}
+@media (hover: none) {
+  .set-task__input input:active {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
 }
 .set-task button {
   background-color: #1b1a17;
@@ -70,10 +84,19 @@ body {
   margin: 1%;
   margin-left: 0;
 }
-.set-task button:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
+@media (hover: hover) {
+  .set-task button:hover {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
+}
+@media (hover: none) {
+  .set-task button:active {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
 }
 .set-task button:hover {
   border: 2px solid #a35709;
@@ -129,13 +152,27 @@ ul .task .container {
   color: #f0e3ca;
   font-family: "Roboto", sans-serif;
 }
-ul .task .container h1 {
-  font-weight: 500;
+ul .task .container__text {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
-ul .task .container h2 {
+@media (max-width: 450px) {
+  ul .task .container__text {
+    width: 70%;
+  }
+}
+ul .task .container__text h1 {
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+ul .task .container__text h2 {
   font-weight: 400;
+  overflow-wrap: break-word;
 }
 ul .task button {
+  width: 50px;
+  height: 45px;
   background-color: #1b1a17;
   border: 2px solid #ff8303;
   border-radius: 8px;
@@ -146,10 +183,19 @@ ul .task button {
   font-size: 25px;
   color: #ff8303;
 }
-ul .task button:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
+@media (hover: hover) {
+  ul .task button:hover {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
+}
+@media (hover: none) {
+  ul .task button:active {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
 }
 ul .task .menu {
   display: flex;
@@ -210,10 +256,19 @@ ul .task .menu button {
   width: 64px;
   height: 24px;
 }
-.overlay .delete-task__buttons button:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
+@media (hover: hover) {
+  .overlay .delete-task__buttons button:hover {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
+}
+@media (hover: none) {
+  .overlay .delete-task__buttons button:active {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
 }
 .overlay .edit {
   padding-top: 15px;
@@ -243,10 +298,19 @@ ul .task .menu button {
   height: 25px;
   padding: 2px 0 2px 2px;
 }
-.overlay .edit__mini-input:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
+@media (hover: hover) {
+  .overlay .edit__mini-input:hover {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
+}
+@media (hover: none) {
+  .overlay .edit__mini-input:active {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
 }
 .overlay .edit__max-input {
   background-color: #1b1a17;
@@ -264,10 +328,19 @@ ul .task .menu button {
   padding: 2px 0 2px 4px;
   resize: none;
 }
-.overlay .edit__max-input:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
+@media (hover: hover) {
+  .overlay .edit__max-input:hover {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
+}
+@media (hover: none) {
+  .overlay .edit__max-input:active {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
 }
 .overlay .edit__buttons {
   display: flex;
@@ -284,10 +357,19 @@ ul .task .menu button {
   width: 64px;
   height: 24px;
 }
-.overlay .edit__buttons button:hover {
-  color: #393939;
-  border: 2px solid #a35709;
-  background-color: #1f1e1b;
+@media (hover: hover) {
+  .overlay .edit__buttons button:hover {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
+}
+@media (hover: none) {
+  .overlay .edit__buttons button:active {
+    color: #393939;
+    border: 2px solid #a35709;
+    background-color: #1f1e1b;
+  }
 }
 .overlay .share {
   padding-top: 15px;

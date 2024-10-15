@@ -37,7 +37,7 @@ function createTaskElement(task) {
   deleteButton.textContent = "x";
 
   const containerText = document.createElement("div");
-  containerText.className = "container_text";
+  containerText.className = "container__text";
 
   containerText.appendChild(title);
   containerText.appendChild(about);
