@@ -3,6 +3,7 @@ const titleInput = document.getElementById("titleInput");
 const aboutInput = document.getElementById("aboutInput");
 const taskList = document.getElementById("taskList");
 
+checkTasks();
 loadTasks();
 
 function addTask() {
@@ -18,6 +19,7 @@ function addTask() {
     aboutInput.value = "";
 
     saveTasks();
+    checkTasks();
   } else {
     alert("Все поля должны быть заполнены!");
   }
@@ -47,6 +49,7 @@ function createTaskElement(task) {
   container.appendChild(deleteButton);
 
   const listItem = document.createElement("li");
+  listItem.className = "task";
 
   taskList.appendChild(listItem);
 
@@ -68,7 +71,7 @@ function createTaskElement(task) {
 
 function saveTasks() {
   let tasks = [];
-  taskList.querySelectorAll("li").forEach((item) => {
+  taskList.querySelectorAll(".task").forEach((item) => {
     const title = item.querySelector("h1").textContent;
     const about = item.querySelector("h2").textContent;
 
@@ -76,6 +79,25 @@ function saveTasks() {
   });
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function checkTasks() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const noTasksItem = taskList.querySelector("li.no-tasks");
+
+  if (tasks.length === 0) {
+    const noTasks = document.createElement("li");
+    noTasks.className = "no-tasks";
+
+    const noTasksText = document.createElement("h1");
+    noTasksText.textContent = "No tasks";
+
+    noTasks.appendChild(noTasksText);
+
+    taskList.appendChild(noTasks);
+  } else if (tasks.length > 0 && noTasksItem) {
+    noTasksItem.remove();
+  }
 }
 
 function loadTasks() {

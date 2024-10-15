@@ -62,9 +62,16 @@ ul {
     color: #ffffff;
     width: 10%;
     padding: 1% 0% 1% 0%;
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      font-family: "Inter", sans-serif;
+      font-weight: 100;
+    }
   }
 
-  li {
+  .task {
     list-style-type: none;
     display: flex;
     flex-direction: column;

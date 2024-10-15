@@ -98,19 +98,25 @@ ul .no-tasks {
   color: #ffffff;
   width: 10%;
   padding: 1% 0% 1% 0%;
+  display: flex;
+  justify-content: center;
 }
-ul li {
+ul .no-tasks h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+ul .task {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   width: 98.5%;
   align-items: center;
 }
-ul li:hover {
+ul .task:hover {
   color: #f0e3ca;
   border-color: #ff8303;
 }
-ul li .container {
+ul .task .container {
   background-color: #1b1a17;
   border: 2px solid #ff8303;
   border-radius: 8px;
@@ -122,13 +128,13 @@ ul li .container {
   color: #f0e3ca;
   font-family: "Roboto", sans-serif;
 }
-ul li .container h1 {
+ul .task .container h1 {
   font-weight: 500;
 }
-ul li .container h2 {
+ul .task .container h2 {
   font-weight: 400;
 }
-ul li button {
+ul .task button {
   background-color: #1b1a17;
   border: 2px solid #ff8303;
   border-radius: 8px;
@@ -139,21 +145,21 @@ ul li button {
   font-size: 25px;
   color: #ff8303;
 }
-ul li button:hover {
+ul .task button:hover {
   color: #393939;
   border: 2px solid #a35709;
   background-color: #1f1e1b;
 }
-ul li .menu {
+ul .task .menu {
   display: flex;
   margin-top: 1%;
   align-self: flex-end;
   display: none;
 }
-ul li .menu.visible {
+ul .task .menu.visible {
   display: flex;
 }
-ul li .menu button {
+ul .task .menu button {
   align-items: center;
   justify-content: center;
 }/*# sourceMappingURL=styles.css.map */
