@@ -1,4 +1,16 @@
 
+@font-face {
+  font-family: Roboto;
+  src: url("../../assets/fonts/roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../../assets/fonts/inter/static/Inter_24pt-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +46,7 @@ body {
   border: 2px solid #ff8303;
   border-radius: 8px;
   color: #f0e3ca;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   margin-top: 1%;
   height: 50%;
@@ -106,16 +119,14 @@ ul li .container {
   width: 100%;
   padding: 1% 1% 1% 1%;
   justify-content: space-between;
-}
-ul li .container__text {
-  display: flex;
-  flex-direction: column;
-}
-ul li .container__text h1 {
   color: #f0e3ca;
+  font-family: "Roboto", sans-serif;
 }
-ul li .container__text h2 {
-  color: #f0e3ca;
+ul li .container h1 {
+  font-weight: 500;
+}
+ul li .container h2 {
+  font-weight: 400;
 }
 ul li button {
   background-color: #1b1a17;
