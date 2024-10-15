@@ -46,6 +46,45 @@ function createTaskElement(task) {
   container.appendChild(containerText);
   container.appendChild(deleteButton);
 
+  const listItem = document.createElement("li");
+
+  taskList.appendChild(listItem);
+
+  listItem.appendChild(container);
+  listItem.appendChild(createMenu(task));
+
+  deleteButton.addEventListener("click", () => {
+    event.stopPropagation();
+    taskList.removeChild(listItem);
+    saveTasks();
+  });
+
+  container.addEventListener("click", () => {
+    menu = listItem.querySelector(".menu");
+
+    menu.classList.toggle("visible");
+  });
+}
+
+function saveTasks() {
+  let tasks = [];
+  taskList.querySelectorAll("li").forEach((item) => {
+    const title = item.querySelector("h1").textContent;
+    const about = item.querySelector("h2").textContent;
+
+    tasks.push({ title, about });
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  tasks.forEach(createTaskElement);
+}
+
+function createMenu(task) {
   const shareButton = document.createElement("button");
   const shareImage = document.createElement("img");
   shareImage.src = "../../assets/menu/share.svg";
@@ -70,37 +109,5 @@ function createTaskElement(task) {
   menu.appendChild(infoButton);
   menu.appendChild(editButton);
 
-  const listItem = document.createElement("li");
-
-  taskList.appendChild(listItem);
-
-  listItem.appendChild(container);
-  listItem.appendChild(menu);
-
-  deleteButton.addEventListener("click", () => {
-    event.stopPropagation();
-    taskList.removeChild(listItem);
-    saveTasks();
-  });
-  container.addEventListener("click", () => {
-    alert("Div был нажат!");
-  });
-}
-
-function saveTasks() {
-  let tasks = [];
-  taskList.querySelectorAll("li").forEach((item) => {
-    const title = item.querySelector("h1").textContent;
-    const about = item.querySelector("h2").textContent;
-
-    tasks.push({ title, about });
-  });
-
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-}
-
-function loadTasks() {
-  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-  tasks.forEach(createTaskElement);
+  return menu;
 }

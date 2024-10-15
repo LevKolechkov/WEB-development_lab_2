@@ -137,10 +137,10 @@ ul li .menu {
   display: flex;
   margin-top: 1%;
   align-self: flex-end;
-  display: flex;
-}
-ul li .menu .visible {
   display: none;
+}
+ul li .menu.visible {
+  display: flex;
 }
 ul li .menu button {
   align-items: center;

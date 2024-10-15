@@ -110,10 +110,10 @@ ul {
       display: flex;
       margin-top: 1%;
       align-self: flex-end;
-      display: flex;
+      display: none;
 
-      .visible {
-        display: none;
+      &.visible {
+        display: flex;
       }
 
       button {
