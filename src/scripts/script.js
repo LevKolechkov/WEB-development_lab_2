@@ -53,7 +53,7 @@ function createTaskElement(task) {
   taskList.appendChild(listItem);
 
   listItem.appendChild(container);
-  listItem.appendChild(createMenu(task));
+  listItem.appendChild(createMenu(listItem));
 
   deleteButton.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -105,7 +105,7 @@ function loadTasks() {
   tasks.forEach(createTaskElement);
 }
 
-function createMenu(task) {
+function createMenu(listItem) {
   const shareButton = document.createElement("button");
   const shareImage = document.createElement("img");
   shareImage.src = "../../assets/menu/share.svg";
@@ -129,6 +129,10 @@ function createMenu(task) {
   menu.appendChild(shareButton);
   menu.appendChild(infoButton);
   menu.appendChild(editButton);
+
+  editButton.addEventListener("click", () => {
+    editMenu(listItem);
+  });
 
   return menu;
 }
@@ -167,6 +171,54 @@ function deleteMenu(listItem) {
   });
 
   noButton.addEventListener("click", () => {
+    document.body.removeChild(overlay);
+  });
+}
+
+function editMenu(listItem) {
+  const cancelButton = document.createElement("button");
+  cancelButton.textContent = "Cancel";
+
+  const saveButton = document.createElement("button");
+  saveButton.textContent = "Save";
+
+  const editButtons = document.createElement("div");
+  editButtons.className = "edit__buttons";
+  editButtons.appendChild(cancelButton);
+  editButtons.appendChild(saveButton);
+
+  const maxText = document.createElement("textarea");
+  maxText.className = "edit__max-input";
+  maxText.placeholder = "Max input";
+  maxText.value = listItem.querySelector("h2").textContent;
+
+  const miniText = document.createElement("input");
+  miniText.type = "text";
+  miniText.className = "edit__mini-input";
+  miniText.placeholder = "Max input";
+  miniText.value = listItem.querySelector("h1").textContent;
+
+  const editContainer = document.createElement("div");
+  editContainer.className = "edit";
+  editContainer.appendChild(miniText);
+  editContainer.appendChild(maxText);
+  editContainer.appendChild(editButtons);
+
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.appendChild(editContainer);
+
+  document.body.appendChild(overlay);
+
+  cancelButton.addEventListener("click", () => {
+    document.body.removeChild(overlay);
+  });
+
+  saveButton.addEventListener("click", () => {
+    listItem.querySelector("h1").textContent = miniText.value;
+    listItem.querySelector("h2").textContent = maxText.value;
+
+    saveTasks();
     document.body.removeChild(overlay);
   });
 }
