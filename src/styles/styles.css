@@ -174,9 +174,9 @@ ul .task .menu button {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .overlay .delete-task {
+  align-self: center;
   display: flex;
   flex-direction: column;
   border-top: 5px solid #a35709;
@@ -205,10 +205,86 @@ ul .task .menu button {
   border: 2px solid #ff8303;
   border-radius: 8px;
   color: #f0e3ca;
+  border: 1px solid #ff8303;
+  border-radius: 4px;
   width: 64px;
   height: 24px;
 }
 .overlay .delete-task__buttons button:hover {
+  color: #393939;
+  border: 2px solid #a35709;
+  background-color: #1f1e1b;
+}
+.overlay .edit {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #1b1a17;
+  align-self: flex-end;
+  width: 256px;
+  height: 45%;
+  gap: 10px;
+}
+.overlay .edit__mini-input {
+  background-color: #1b1a17;
+  border: 2px solid #ff8303;
+  border-radius: 8px;
+  color: #f0e3ca;
+  border: 1px solid #ff8303;
+  border-radius: 4px;
+  background-color: #1b1a17;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  align-self: center;
+  width: 90%;
+  height: 25px;
+  padding: 2px 0 2px 2px;
+}
+.overlay .edit__mini-input:hover {
+  color: #393939;
+  border: 2px solid #a35709;
+  background-color: #1f1e1b;
+}
+.overlay .edit__max-input {
+  background-color: #1b1a17;
+  border: 2px solid #ff8303;
+  border-radius: 8px;
+  color: #f0e3ca;
+  border: 1px solid #ff8303;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  align-self: center;
+  width: 90%;
+  height: 75%;
+  padding: 2px 0 2px 4px;
+  resize: none;
+}
+.overlay .edit__max-input:hover {
+  color: #393939;
+  border: 2px solid #a35709;
+  background-color: #1f1e1b;
+}
+.overlay .edit__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.overlay .edit__buttons button {
+  background-color: #1b1a17;
+  border: 2px solid #ff8303;
+  border-radius: 8px;
+  color: #f0e3ca;
+  border: 1px solid #ff8303;
+  border-radius: 4px;
+  width: 64px;
+  height: 24px;
+}
+.overlay .edit__buttons button:hover {
   color: #393939;
   border: 2px solid #a35709;
   background-color: #1f1e1b;
