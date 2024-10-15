@@ -1,2 +1,3 @@
 Прогресс:
-![Диаграмма Ганта](https://github.com/user-attachments/assets/66796dce-13cc-460a-ab27-0737e0340c4b)
+![image](https://github.com/user-attachments/assets/041eec7d-f658-46bb-b172-670c886161e3)
+
