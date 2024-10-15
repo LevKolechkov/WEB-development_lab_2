@@ -100,6 +100,7 @@ ul .no-tasks {
   padding: 1% 0% 1% 0%;
   display: flex;
   justify-content: center;
+  white-space: nowrap;
 }
 ul .no-tasks h1 {
   font-family: "Inter", sans-serif;
@@ -162,4 +163,43 @@ ul .task .menu.visible {
 ul .task .menu button {
   align-items: center;
   justify-content: center;
+}
+
+.delete-task {
+  display: flex;
+  flex-direction: column;
+  border-top: 5px solid #a35709;
+  position: relative;
+  background-color: #1b1a17;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 256px;
+  height: 128px;
+  justify-content: space-around;
+  align-items: center;
+}
+.delete-task h1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding-top: 5%;
+}
+.delete-task__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.delete-task__buttons button {
+  background-color: #1b1a17;
+  border: 2px solid #ff8303;
+  border-radius: 8px;
+  color: #f0e3ca;
+  width: 64px;
+  height: 24px;
+}
+.delete-task__buttons button:hover {
+  color: #393939;
+  border: 2px solid #a35709;
+  background-color: #1f1e1b;
 }/*# sourceMappingURL=styles.css.map */
