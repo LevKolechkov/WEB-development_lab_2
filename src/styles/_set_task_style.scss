@@ -1,0 +1,43 @@
+.set-task {
+  display: flex;
+  margin: 5%;
+  height: 120px;
+  width: 80%;
+  justify-content: center;
+  padding: 0;
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    gap: 10%;
+
+    input {
+      @include yellow-bordered;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      margin-top: 1%;
+      height: 50%;
+      padding: 0% 2% 0% 1%;
+    }
+  }
+
+  button {
+    @include yellow-bordered;
+    font-size: 200%;
+    color: #ff8303;
+
+    height: 100px;
+    width: 100px;
+    border: 4px solid #ff8303;
+
+    margin: 1%;
+    margin-left: 0;
+    &:hover {
+      border: 2px solid #a35709;
+      color: #a35709;
+    }
+  }
+}

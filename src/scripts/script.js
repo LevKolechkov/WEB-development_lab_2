@@ -19,7 +19,6 @@ function addTask() {
     aboutInput.value = "";
 
     saveTasks();
-    checkTasks();
   } else {
     alert("Все поля должны быть заполнены!");
   }
@@ -79,6 +78,7 @@ function saveTasks() {
   });
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  checkTasks();
 }
 
 function checkTasks() {
