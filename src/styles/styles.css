@@ -43,7 +43,7 @@ body {
 }
 @media (max-width: 450px) {
   .set-task__input {
-    width: 60%;
+    width: 55%;
   }
 }
 .set-task__input input {
@@ -53,8 +53,8 @@ body {
   color: #f0e3ca;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  margin-top: 1%;
-  height: 50%;
+  margin-top: 0%;
+  height: 55%;
   padding: 0% 2% 0% 1%;
 }
 @media (hover: hover) {
@@ -76,12 +76,12 @@ body {
   border: 2px solid #ff8303;
   border-radius: 8px;
   color: #f0e3ca;
-  font-size: 200%;
+  font-size: 96px;
   color: #ff8303;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 125px;
   border: 4px solid #ff8303;
-  margin: 1%;
+  margin: 0%;
   margin-left: 0;
 }
 @media (hover: hover) {
@@ -182,6 +182,7 @@ ul .task button {
   width: 50px;
   font-size: 25px;
   color: #ff8303;
+  padding-bottom: 4px;
 }
 @media (hover: hover) {
   ul .task button:hover {
